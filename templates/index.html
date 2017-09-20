@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=pl>
+  <title> Data Collector App </title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div>
+        <div class="container">
+          <h1>Średni wzrost ludzi</h1>
+          <h3>Uzupełnij pola, aby otrzymać statystyki ze wzrostem </h3>
+          <form action="{{url_for('success')}}" method="POST">
+            <input title="Nie martw się! Twój e-mail będzie bezpieczny." placeholder="Podaj e-mail" type="email" name="email_name" required><br>
+            <input title="Tylko nie kłam!!" placeholder="Podaj wzrost w cm" type="number" min="50" max="250" name="height_value" required><br>
+            <div>
+              <div class="radio">
+                <input type="radio" title="Jesteś pewien ?" name="gender_value" value="male" checked>Mężczyzna<br>
+                <input type="radio" title="Jesteś pewien ?" name="gender_value" value="female"> Kobieta<br>
+                <input type="radio" title="Jesteś pewien ?" name="gender_value" value="other"> Inny<br>
+            </div>
+            <button type="submit"> Wyślij </button>
+          </form>
+      </div>
+    </body>
+</html>
